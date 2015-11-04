@@ -9,7 +9,14 @@ namespace Brello.Models
 	{
         public int BoardId { get; set; }
         public string  Title { get; set; }
+        // Changed from ICollectiont to LIst
         public virtual ICollection<BrelloList> Lists { get; set; }
         public virtual ICollection<ApplicationUser> Followers { get; set; }
+
+        public Board()
+        {
+            Lists = new List<BrelloList>();
+            Followers = new List<ApplicationUser>();
+        }
 	}
 }
