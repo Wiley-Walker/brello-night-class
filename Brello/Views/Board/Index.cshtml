@@ -1,6 +1,10 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var things = new List<string>();
+    things.Add("foo");
+    things.Add("bar");
 }
 
     <h1>@ViewBag.Message</h1>
+@using (Html.BeginForm("Create", "Board", FormMethod.Post, htmlAttributes: new object { style = "display:block;" }))
     
